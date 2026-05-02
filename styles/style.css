@@ -295,6 +295,49 @@ body {
   font-size: 0.7rem;
 }
 
+/* Botones PDF en Sidebar */
+.sidebar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.dl-btn {
+  font-family: inherit;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 16px;
+  border: 1px solid transparent;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+.dl-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.dl-btn-cv {
+  background: var(--btn-pdf);
+}
+
+.dl-btn-port {
+  background: var(--btn-port);
+}
+
+.dl-btn-carta {
+  background: var(--btn-carta);
+}
+
 /* ================== ÁREA PRINCIPAL (DERECHA) ================== */
 .main {
   flex-grow: 1;
