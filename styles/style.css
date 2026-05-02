@@ -1,1 +1,71 @@
-h1 { color: red;}
+/* ================== VARIABLES ================== */
+:root {
+    --bg: #eef2f5;
+    --sidebar-bg: #0f2b30;
+    --sidebar-text: #c6e6e9;
+    --sidebar-muted: #7fa4ab;
+
+    --main-bg: #ffffff;
+    --main-text: #1a2028;
+    --main-muted: #64748b;
+
+    --accent: #0d9488;
+    --accent-2: #06b6d4;
+    --accent-glow: rgba(6, 182, 212, 0.15);
+
+    --line: #e2e8f0;
+    --tag-bg: #e0f2f4;
+    --tag-text: #0f766e;
+    --tag-border: #bfe6ea;
+    --soft-bg: #f8fafc;
+
+    --shadow: rgba(0, 0, 0, 0.1);
+    --btn-pdf: #e11d48;
+    --btn-port: #0891b2;
+    --btn-carta: #0d9488;
+}
+
+html[data-theme="dark"] {
+    --bg: #071418;
+    --sidebar-bg: #0a1a1f;
+    --sidebar-text: #c6e6e9;
+    --sidebar-muted: #7fa4ab;
+
+    --main-bg: #0e1f24;
+    --main-text: #e3f4f6;
+    --main-muted: #8b949e;
+
+    --accent: #2dd4bf;
+    --accent-2: #22d3ee;
+
+    --line: #1e3a41;
+    --tag-bg: rgba(45, 212, 191, 0.12);
+    --tag-text: #5eead4;
+    --tag-border: rgba(45, 212, 191, 0.3);
+    --soft-bg: #12272d;
+}
+
+/* ================== RESET & LAYOUT BASE ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--main-text);
+    line-height: 1.4;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.35s ease;
+}
