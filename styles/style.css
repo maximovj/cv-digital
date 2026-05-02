@@ -244,6 +244,38 @@ body {
   color: #fff;
 }
 
+.sb-about {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--sidebar-text);
+  opacity: 0.9;
+  text-align: justify;
+}
+
+.edu-item {
+  margin-bottom: 10px;
+}
+
+.edu-item .t {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.edu-item .l {
+  font-size: 0.65rem;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.edu-item .d {
+  font-size: 0.65rem;
+  color: var(--sidebar-muted);
+  margin-top: 1px;
+}
+
 /* ================== ÁREA PRINCIPAL (DERECHA) ================== */
 .main {
   flex-grow: 1;
