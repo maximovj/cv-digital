@@ -215,6 +215,35 @@ body {
   padding-bottom: 4px;
 }
 
+.contact-list {
+  list-style: none;
+  font-size: 0.75rem;
+}
+
+.contact-list li {
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-list i {
+  color: var(--accent-2);
+  font-size: 0.85rem;
+  width: 14px;
+  text-align: center;
+}
+
+.contact-list a {
+  color: var(--sidebar-text);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-list a:hover {
+  color: #fff;
+}
+
 /* ================== ÁREA PRINCIPAL (DERECHA) ================== */
 .main {
   flex-grow: 1;
