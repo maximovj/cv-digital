@@ -487,3 +487,8 @@ body {
   color: var(--main-muted);
   margin-top: 2px;
 }
+
+.btn-link {
+  text-decoration: none;
+  color: --var(--main-text);
+}
