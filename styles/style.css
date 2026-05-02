@@ -414,3 +414,49 @@ body {
   background: var(--accent);
   transform: scale(1.2);
 }
+
+.tl-content {
+  background: var(--soft-bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.78rem;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background 0.35s ease;
+}
+
+.tl-item:hover .tl-content {
+  border-color: var(--accent-2);
+  transform: translateX(3px);
+}
+
+.tl-content .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 2px;
+  flex-wrap: wrap;
+}
+
+.tl-content .title {
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: var(--main-text);
+}
+
+.tl-content .date {
+  font-size: 0.7rem;
+  color: var(--main-muted);
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.tl-content .sub {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
