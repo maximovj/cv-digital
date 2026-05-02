@@ -147,8 +147,8 @@ body {
 
 .status {
   position: absolute;
-  bottom: 2px;
-  right: 2px;
+  bottom: 10px;
+  right: 10px;
   width: 14px;
   height: 14px;
   background: #10b981;
@@ -171,7 +171,7 @@ body {
 }
 
 .sb-header h1 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 800;
   color: #fff;
   letter-spacing: -0.3px;
