@@ -276,6 +276,25 @@ body {
   margin-top: 1px;
 }
 
+.apt-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: none;
+}
+
+.apt-list li {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.apt-list i {
+  color: var(--accent-2);
+  font-size: 0.7rem;
+}
+
 /* ================== ÁREA PRINCIPAL (DERECHA) ================== */
 .main {
   flex-grow: 1;
