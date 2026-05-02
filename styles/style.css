@@ -368,3 +368,49 @@ body {
     background 0.35s ease,
     border-color 0.35s ease;
 }
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 6px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 0;
+  left: 12px;
+  width: 2px;
+  background: var(--line);
+  z-index: 1;
+  transition: background 0.35s ease;
+}
+
+.tl-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 16px;
+  z-index: 2;
+}
+
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--main-bg);
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+  z-index: 3;
+  transition: all 0.2s ease;
+}
+
+.tl-item:hover::before {
+  background: var(--accent);
+  transform: scale(1.2);
+}
