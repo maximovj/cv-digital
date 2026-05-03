@@ -700,3 +700,70 @@ html[data-theme="dark"] .theme-toggle .fa-sun {
   margin-bottom: 15px;
   text-align: justify;
 }
+
+/* /// PDF SIEMPRE EN MODO LIGHT */
+@media print {
+  :root,
+  html,
+  html[data-theme="dark"],
+  html[data-theme="light"] {
+    --bg: #eef2f5;
+    --sidebar-bg: #0f2b30;
+    --sidebar-text: #c6e6e9;
+    --sidebar-muted: #7fa4ab;
+
+    --main-bg: #ffffff;
+    --main-text: #1a2028;
+    --main-muted: #64748b;
+
+    --accent: #0d9488;
+    --accent-2: #06b6d4;
+    --accent-glow: rgba(6, 182, 212, 0.15);
+
+    --line: #e2e8f0;
+    --tag-bg: #e0f2f4;
+    --tag-text: #0f766e;
+    --tag-border: #bfe6ea;
+    --soft-bg: #f8fafc;
+
+    --shadow: rgba(0, 0, 0, 0.1);
+
+    color-scheme: light !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #1a2028 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .cv,
+  .main,
+  .main-body {
+    background: #ffffff !important;
+    color: #1a2028 !important;
+  }
+
+  .sidebar {
+    background: #0f2b30 !important;
+    color: #c6e6e9 !important;
+  }
+
+  .tl-content {
+    background: #f8fafc !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  .tag {
+    background: #e0f2f4 !important;
+    color: #0f766e !important;
+    border-color: #bfe6ea !important;
+  }
+
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
