@@ -28,4 +28,38 @@
       toast.style.transform = "translateX(-50%) translateY(20px)";
     }, 2000);
   }
+
+  /* Botones PDF */
+  const titles = {
+    cv: "CV - Víctor Jesús Máximo Abundio",
+    port: "Portafolio - Víctor Jesús Máximo Abundio",
+    carta: "Carta - Víctor Jesús Máximo Abundio",
+  };
+  const originalTitle = document.title;
+
+  document.querySelectorAll(".dl-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const mode = btn.dataset.print;
+      html.classList.remove(
+        "print-mode-cv",
+        "print-mode-port",
+        "print-mode-carta",
+      );
+      html.classList.add("print-mode-" + mode);
+      document.title = titles[mode];
+      showToast(`🖨️ Preparando PDF…`);
+      setTimeout(() => window.print(), 200);
+    });
+  });
+
+  window.addEventListener("afterprint", () => {
+    setTimeout(() => {
+      html.classList.remove(
+        "print-mode-cv",
+        "print-mode-port",
+        "print-mode-carta",
+      );
+      document.title = originalTitle;
+    }, 200);
+  });
 })();
