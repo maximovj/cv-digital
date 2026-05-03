@@ -575,6 +575,14 @@ html[data-theme="dark"] .theme-toggle .fa-sun {
   color: --var(--main-text);
 }
 
+.btn-cv-link {
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.072rem;
+  font-weight: 200;
+  display: none;
+}
+
 /* /// IMPRESIÓN /// */
 @media print {
   @page {
@@ -647,6 +655,16 @@ html[data-theme="dark"] .theme-toggle .fa-sun {
   html.print-mode-carta .print-cv,
   html.print-mode-carta .print-portafolio {
     display: none !important;
+  }
+
+  html.print-mode-cv .print-cv,
+  html.print-mode-cv .btn-cv-link {
+    display: block !important;
+  }
+
+  html.print-mode-port .print-portafolio,
+  html.print-mode-port .btn-cv-link {
+    display: block !important;
   }
 
   html.print-mode-carta .sidebar,
