@@ -10,4 +10,9 @@
   const initial = saved || (prefersDark ? "light" : "dark");
   html.setAttribute("data-theme", initial);
 
+  btnTheme.addEventListener("click", () => {
+    const next = html.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    html.setAttribute("data-theme", next);
+    localStorage.setItem(KEY, next);
+  });
 })();

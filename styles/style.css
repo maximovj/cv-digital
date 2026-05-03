@@ -1,4 +1,4 @@
-/* ================== VARIABLES ================== */
+/* /// VARIABLES */
 :root {
   --bg: #eef2f5;
   --sidebar-bg: #0f2b30;
@@ -45,7 +45,7 @@ html[data-theme="dark"] {
   --soft-bg: #12272d;
 }
 
-/* ================== RESET & LAYOUT BASE ================== */
+/* /// RESET & LAYOUT BASE */
 * {
   margin: 0;
   padding: 0;
@@ -70,7 +70,46 @@ body {
   transition: background 0.35s ease;
 }
 
-/* ================== CONTENEDOR PRINCIPAL ================== */
+/* /// TOGGLE TEMA */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 100;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--main-bg);
+  color: var(--main-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px var(--shadow);
+  transition:
+    transform 0.2s ease,
+    background 0.35s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+}
+
+.theme-toggle .fa-sun,
+.theme-toggle .fa-moon {
+  display: none;
+}
+
+html[data-theme="light"] .theme-toggle .fa-moon {
+  display: block;
+}
+
+html[data-theme="dark"] .theme-toggle .fa-sun {
+  display: block;
+}
+
+/* /// CONTENEDOR PRINCIPAL */
 .cv {
   width: 100%;
   max-width: 1000px;
@@ -84,7 +123,7 @@ body {
   transition: background 0.35s ease;
 }
 
-/* ================== SIDEBAR IZQUIERDO ================== */
+/* /// SIDEBAR IZQUIERDO */
 .sidebar {
   width: 320px;
   flex-shrink: 0;
@@ -338,7 +377,7 @@ body {
   background: var(--btn-carta);
 }
 
-/* ================== ÁREA PRINCIPAL (DERECHA) ================== */
+/* /// ÁREA PRINCIPAL (DERECHA) */
 .main {
   flex-grow: 1;
   display: flex;
