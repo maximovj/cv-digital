@@ -662,4 +662,10 @@ html[data-theme="dark"] .theme-toggle .fa-sun {
   html.print-mode-carta .main-body {
     display: none !important;
   }
+
+  .sb-section-descargar,
+  .toast,
+  .btn-link {
+    display: none !important;
+  }
 }
