@@ -15,4 +15,17 @@
     html.setAttribute("data-theme", next);
     localStorage.setItem(KEY, next);
   });
+
+  /* Toast */
+  let toastTimer;
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.style.opacity = "1";
+    toast.style.transform = "translateX(-50%) translateY(0)";
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.style.opacity = "0";
+      toast.style.transform = "translateX(-50%) translateY(20px)";
+    }, 2000);
+  }
 })();
