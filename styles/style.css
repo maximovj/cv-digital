@@ -574,3 +574,92 @@ html[data-theme="dark"] .theme-toggle .fa-sun {
   text-decoration: none;
   color: --var(--main-text);
 }
+
+/* /// IMPRESIÓN /// */
+@media print {
+  @page {
+    margin: 10mm;
+    size: letter portrait;
+  }
+  body {
+    height: auto;
+    overflow: visible;
+    background: #fff !important;
+    padding: 0;
+    display: block;
+  }
+  .cv {
+    height: auto;
+    max-height: none;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: 100%;
+    display: block;
+  }
+
+  .theme-toggle,
+  .sidebar-actions,
+  .main-header {
+    display: none !important;
+  }
+
+  .sidebar {
+    width: 100%;
+    break-inside: avoid;
+    padding: 20px;
+  }
+  .sb-body {
+    overflow: visible;
+    display: block;
+  }
+  .main {
+    overflow: visible;
+  }
+  .main-body {
+    padding: 20px 0;
+    overflow: visible;
+    display: block;
+  }
+
+  .tl-item {
+    break-inside: avoid;
+  }
+
+  .sidebar {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    background: var(--sidebar-bg) !important;
+  }
+  .avatar,
+  .status,
+  .tag,
+  .main-section h2::after,
+  .tl-item::before {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Filtros PDF */
+  html.print-mode-cv .print-portafolio,
+  html.print-mode-cv .print-carta,
+  html.print-mode-port .print-cv,
+  html.print-mode-port .print-carta,
+  html.print-mode-carta .print-cv,
+  html.print-mode-carta .print-portafolio {
+    display: none !important;
+  }
+
+  html.print-mode-carta .sidebar,
+  html.print-mode-carta .avatar-wrap {
+    display: none !important;
+  }
+  html.print-mode-carta .main {
+    padding: 30px;
+  }
+  html.print-mode-carta .letter {
+    display: block !important;
+  }
+  html.print-mode-carta .main-body {
+    display: none !important;
+  }
+}
