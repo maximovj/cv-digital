@@ -29,6 +29,20 @@
     }, 2000);
   }
 
+  function agregarFechaCarta() {
+    const fecha = new Date();
+
+    const fechaFormateada = fecha.toLocaleDateString("es-MX", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+
+    document.getElementById("fechaCarta").textContent = fechaFormateada;
+  }
+
+  agregarFechaCarta();
+
   /* Botones PDF */
   const titles = {
     cv: "CV - Víctor Jesús Máximo Abundio",
@@ -51,6 +65,8 @@
       setTimeout(() => window.print(), 200);
     });
   });
+
+  window.addEventListener("beforeprint", actualizarFechaCarta);
 
   window.addEventListener("afterprint", () => {
     setTimeout(() => {
